@@ -1,0 +1,365 @@
+- @sitename
+
+
+!!! 5
+%html{html_attrs}
+  %head
+    %title= @title
+    // Buggy on the iPhone4
+    // %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0", :name => "viewport"}
+    %link{:href => "stylesheets/stylesheet.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "stylesheets/mosaic.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "stylesheets/lightbox.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
+    %script{:type => "text/javascript", :src => "javascripts/jquery-1.5.min.js"}
+    %script{:type => "text/javascript", :src => "javascripts/respond.min.js"}
+    %script{:type => "text/javascript", :src => "javascripts/mosaic.1.0.1.js"}
+    %script{:type => "text/javascript", :src => "javascripts/modernizr-1.6.min.js"}
+    %script{:type => "text/javascript", :src => "javascripts/application.js"}
+    %script{:type => "text/javascript", :src => "javascripts/jquery.color.js"}
+    %script{:type => "text/javascript", :src => "javascripts/menu-control.js"}
+
+
+
+    :javascript
+      jQuery(function($){
+
+      				$('.bar2').mosaic({
+      					animation	:	'slide'		//fade or slide
+      				});
+
+
+      		    });
+
+  %body
+    .bg-slider
+    .header
+      .logo
+        %img{:alt => "Item", :src => "/images/logo.png"}
+    .main-menu-container
+      %ul.menu
+        %li.gray-1
+          %a{:href => "#", :id => "main-1-link"} HOME
+          %p.subtext 
+            %img{:src => "/images/menu_home_gp.png"}
+        %li.gray-1
+          %a{:href => "#", :id => "main-2-link"} INFORMATION
+          %p.subtext
+            %img{:src => "/images/menu_info_gp.png"}
+        %li.gray-1
+          %a{:href => "#", :id => "main-3-link"} SERVICES
+          %p.subtext
+            %img{:src => "/images/menu_service_gp.png"}
+        %li.gray-1
+          %a{:href => "#", :id => "main-4-link"} SHOWCASE
+          %p.subtext
+            %img{:src => "/images/menu_showcase_gp.png"}
+        %li.gray-1
+          %a{:href => "#", :id => "main-5-link"} MEDIA
+          %p.subtext
+            %img{:src => "/images/menu_media_gp.png"}
+        %li.gray-1
+          %a{:href => "#", :id => "main-6-link"} CONTACT
+          %p.subtext
+            %img{:src => "/images/menu_contact_gp.png"}
+      
+    .main-slider#banner-1
+      .slider-inside-bg
+        %img{:alt => "Item", :src => "/images/banner_2.jpg"}
+        .slider-inside-presentation
+          %img{:alt => "Item", :src => "/images/object_3.png"}
+    .main-slider#banner-2
+      .slider-inside-bg
+        %img{:alt => "Item", :src => "/images/banner_1.jpg"}
+        .slider-inside-presentation
+          %img{:alt => "Item", :src => "/images/object_5.png"}
+    .main-slider#banner-3
+      .slider-inside-bg
+        %img{:alt => "Item", :src => "/images/banner_6.jpg"}
+        .slider-inside-presentation
+          %img{:alt => "Item", :src => "/images/object_4.png"}
+    .main-slider#banner-4
+      .slider-inside-bg
+        %img{:alt => "Item", :src => "/images/banner_4.jpg"}
+        .slider-inside-presentation
+          %img{:alt => "Item", :src => "/images/object_1.png"}     
+    .main-slider#banner-5
+      .slider-inside-bg
+        %img{:alt => "Item", :src => "/images/banner_5.jpg"}
+        .slider-inside-presentation
+          %img{:alt => "Item", :src => "/images/object_2.png"}
+    .main-slider#banner-6
+      .slider-inside-bg
+        %img{:alt => "Item", :src => "/images/banner_3.jpg"}
+        .slider-inside-presentation
+          %img{:alt => "Item", :src => "/images/object_6.png"} 
+    .top-curve
+      .top-curve-left
+      .top-curve-middle
+    //======================PAGE 1=====================================
+    //=================================================================
+    .main-content-1
+      .page
+        .slider-overlay
+          .slider-overlay-slogan
+            %img{:alt => "Item", :src => "/images/slogan_2.png"}
+          .slider-overlay-page-title
+            Home
+          .slider-overlay-button
+        %br
+        .gallery-container
+          .gallery-image
+            .mosaic-block.bar2
+              %a.mosaic-overlay
+                .details
+                  %h4 My Space
+                  %br
+                  %p Connect with us with MySpace
+              .mosaic-backdrop
+                %a{:href => "http://www.myspace.com/713_boys", :target => "blank"}
+                  %img{:src => "/images/myspace.jpg"}
+          .gallery-image
+            .mosaic-block.bar2
+              %a.mosaic-overlay
+                .details
+                  %h4 EBAY
+                  %br
+                  %p Visit our Ebay Store
+              .mosaic-backdrop
+                %a{:href => "#"}
+                  %img{:src => "/images/ebay.jpg"}
+          .gallery-image
+            .mosaic-block.bar2
+              %a.mosaic-overlay
+                .details
+                  %h4 Driving Direction
+                  %br
+                  %p Click here for driving direction
+              .mosaic-backdrop
+                %a{:href => "http://maps.google.com/maps?f=d&hl=en&saddr=&daddr=7300+Southwest+Freeway+Houston,+Texas+77074&sll=29.702284,-95.51603&sspn=0.007157,0.014977&ie=UTF8&z=17&iwloc=addr&om=1", :target => "blank"}
+                  %img{:src => "/images/guy_drive.jpg"}
+        .layout-3-column
+          .column
+            %h1 News and Events
+            %h2 October 21st 2011
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque leo velit, hendrerit sed viverra vel, pellentesque a arcu. Nam in risus nec leo malesuada eleifend. Ut viverra ante vitae urna euismod sed ullamcorper justo congue. Aliquam erat volutpat. 
+            %p
+              In adipiscing aliquam malesuada. In hac habitasse platea dictumst. Ut scelerisque commodo eros tempor accumsan. Donec vitae turpis sed neque placerat auctor ut nec elit. Ut odio dolor, fermentum non rhoncus vitae, viverra ornare diam.
+          .column
+            %h1 Promotions
+            %h2 Coupons
+            %p
+              Mauris scelerisque diam a magna placerat sed volutpat enim semper. Duis suscipit tempus quam, non tempor tellus tincidunt at. In ligula massa, convallis sit amet condimentum eget, lacinia eu nulla. Donec iaculis erat vitae mauris venenatis ut aliquam sem cursus. Nam sit amet dictum neque.
+            %p
+              Mauris sem nulla, bibendum non adipiscing sed, varius id magna. Nulla sed risus id ligula hendrerit elementum eu non urna. Nam sed nisi mauris, eget porta enim
+          .column
+            %h1 Customization
+            %h2 Special Deals
+            %p
+              Donec viverra pellentesque ligula, nec vestibulum diam semper id. Morbi velit nibh, luctus vitae adipiscing sed, fringilla sed lectus. Phasellus tempor elit vitae est lacinia adipiscing. Curabitur pulvinar ultrices condimentum. Etiam vitae urna enim. Nulla iaculis egestas sapien eu eleifend. Phasellus placerat molestie ligula a ornare. Nulla hendrerit pretium quam ut eleifend. Sed a mi arcu, et cursus metus.
+    //============================PAGE 2================================
+    //  ================================================================
+    .main-content-2
+      .page
+        .slider-overlay
+          .slider-overlay-slogan
+            %img{:alt => "Item", :src => "/images/slogan_1.png"}
+          .slider-overlay-page-title
+            About Us
+          .slider-overlay-button
+        %br
+        .layout-3-column
+          .column
+            %h1 What your ride say about you
+            %h2 A little look into the world 713 Motoring
+            %p
+              Donec viverra pellentesque ligula, nec vestibulum diam semper id. Morbi velit nibh, luctus vitae adipiscing sed, fringilla sed lectus. Phasellus tempor elit vitae est lacinia adipiscing. Curabitur pulvinar ultrices condimentum. Etiam vitae urna enim. Nulla iaculis egestas sapien eu eleifend. Phasellus placerat molestie ligula a ornare. Nulla hendrerit pretium quam ut eleifend. Sed a mi arcu, et cursus metus.
+          .column
+            %br
+            %br
+            %br
+            %h2 Passions for Action
+            %p Phasellus tempor elit vitae est lacinia adipiscing. Curabitur pulvinar ultrices condimentum. Etiam vitae urna enim. Nulla iaculis egestas sapien eu eleifend. Phasellus placerat molestie ligula a ornare. Nulla hendrerit pretium quam ut eleifend. Sed a mi arcu, et cursus metus.
+          .column
+            .gallery-image
+              .mosaic-block.bar2
+                %a.mosaic-overlay
+                  .details
+                    %h4 Speed and Blaze
+                    %br
+                    %p Bath in lighting glory
+                .mosaic-backdrop
+                  %img{:src => "/images/image_5.jpg"}
+            .gallery-image
+              .mosaic-block.bar2
+                %a.mosaic-overlay
+                  .details
+                    %h4 Be Unique
+                    %br
+                    %p The only ones that worth driving
+                .mosaic-backdrop
+                  %img{:src => "/images/image_4.jpg"}
+
+
+    //======================PAGE 3=====================================
+    //=================================================================
+    .main-content-3
+      .page
+        .slider-overlay
+          .slider-overlay-slogan
+            //%img{:alt => "Item", :src => "/images/slogan_2.png"}
+          .slider-overlay-page-title
+            Services
+          .slider-overlay-button
+        %br
+        .layout-2-column
+          .column
+            %br
+            %h3 Premium Car Wrap offers the following services:
+            %ul.normal
+              %li Custom Wheels and Tires
+              %li Automotive Accessories
+              %li Window Tinting
+              %li Automotive Suspensions
+              %li Custom Interiors
+              %li Custom Lettering
+              %li Exhaust Systems
+              %li Body Kits and Styling
+              %li Aftermarket Grills
+              %li Custom Floor Mats
+              %li Wheel Repair
+              %li Powder Coating
+              %li Custom Tail Lights
+              %li Restoration
+            %br
+            %h3 Premium Car Wrap also provides vehicles for:
+            %ul.normal
+              %li Photo Shoots
+              %li Music Videos
+              %li Calendars and Special Event
+          .column-wide
+            .gallery-container-2
+              .gallery-image
+                .mosaic-block.bar2
+                  %a.mosaic-overlay
+                    .details
+                      %h4 Silver Tire
+                      %br
+                      %p The only ones that worth driving
+                  .mosaic-backdrop
+                    %img{:src => "/images/image_6.jpg"}
+              .gallery-image
+                .mosaic-block.bar2
+                  %a.mosaic-overlay
+                    .details
+                      %h4 Lasting Impression
+                      %br
+                      %p Bath in lighting glory
+                  .mosaic-backdrop
+                    %img{:src => "/images/car_interior.jpg"}
+            .gallery-container-2
+              .gallery-image
+                .mosaic-block.bar2
+                  %a.mosaic-overlay
+                    .details
+                      %h4 Comfort
+                      %br
+                      %p The only ones that worth driving
+                  .mosaic-backdrop
+                    %img{:src => "/images/guy_drive.jpg"}
+              .gallery-image
+                .mosaic-block.bar2
+                  %a.mosaic-overlay
+                    .details
+                      %h4 Power and Glory
+                      %br
+                      %p Bath in lighting glory
+                  .mosaic-backdrop
+                    %img{:src => "/images/image_9.jpg"}
+    //======================PAGE 4=====================================
+    //=================================================================
+    .main-content-4
+      .page
+        .slider-overlay
+          .slider-overlay-slogan
+            //%img{:alt => "Item", :src => "/images/slogan_2.png"}
+          .slider-overlay-page-title
+            Showcase
+          .slider-overlay-button
+          
+    //======================PAGE 5=====================================
+    //=================================================================
+    .main-content-5
+      .page
+        .slider-overlay
+          .slider-overlay-slogan
+            //%img{:alt => "Item", :src => "/images/slogan_2.png"}
+          .slider-overlay-page-title
+            Media
+          .slider-overlay-button
+        .layout-2-column
+          %br
+          %h1 Publication & Media
+          %p Local, National Press and Event Coverage
+          %br
+          %h2 Ride Magazine
+          %p The only ones that worth driving
+          %img{:src => "/images/ridesmagazine.jpg"}
+          
+    //======================PAGE 6=====================================
+    //=================================================================
+    .main-content-6
+      .page
+        .slider-overlay
+          .slider-overlay-slogan
+            //%img{:alt => "Item", :src => "/images/slogan_2.png"}
+          .slider-overlay-page-title
+            Contact
+          .slider-overlay-button
+        %br
+        %br
+        .layout-2-column
+          .column
+            %br
+            %h1 Store Location
+            %ul.normal
+              %li 9999 Southwest Freeway
+              %li Houston, Texas 77074
+              %li Telephone. 713.999.9999
+              %li Fax. 713.999.9999
+              %li Email. carwrap@premiumcar.com
+              %li Click here for interactive driving directions     
+          .column-wide
+            .pic-pop
+              %img{:src => "/images/map.jpg"}
+            %br
+            %br
+        .layout-3-column
+          .column
+            %h1 Hours of Operation
+            %p
+              Premium Car Wrap is open 6 days a week for your purchasing pleasure. Please stop by our showroom anytime and see how we can help bring your dreams to life. Our hours of operation are:
+            %ul.normal
+              %li Monday - Saturday, 9am - 6pm Central Standard Time.
+              %li We are closed Sundays.
+          .column
+            %h1 Employment Opportunities
+            %p
+              Premium Car Wrap is always seeking highly skilled individuals in car customization for various contract positions. Applicants must be a minimum of 18 years of age with a valid Texas drivers license, a local resident of Houston and have reliable transportation. If you are interested in positions available, please e-mail your resume to careers@713-motoring.com
+          .column
+            %h1 Inquiries
+            %p For advertising and media inquiries, please contact:
+            %h3 Karina
+            %ul.normal
+              %li Telephone. 999.999.9999
+              %li Email. karina@premiumcar.com
+        %br
+        %br
+          %iframe{:allowtransparency => "true", :frameborder => "0", :height => "500",:width => "400", :scrolling => "no", :src => "http://media3creative.wufoo.com/embed/q7p5x7/", :style => "width:100%;border:none"}
+
+
+    .footer
+      .footer-left
+      .footer-right
+      .footer-middle
+  
